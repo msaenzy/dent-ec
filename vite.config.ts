@@ -4,15 +4,15 @@ import path from 'path';
 import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
-  // Base path: supports GitHub Pages subpath '/dentec-demo/' when deployed or relative './'
-  const base = process.env.BASE_PATH || (process.env.BUILD_FOR_GH_PAGES === 'true' ? '/dentec-demo/' : './');
+  // Relative base path ('./') ensures assets resolve properly on GitHub Pages regardless of repository name (e.g. /dent-ec/)
+  const base = process.env.BASE_PATH || './';
 
   return {
     base,
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
-        '@': path.resolve(__dirname, '.'),
+        '@': path.resolve(process.cwd(), '.'),
       },
     },
     server: {

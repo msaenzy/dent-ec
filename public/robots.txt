@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://spondylusdigital.github.io/dentec-demo/sitemap.xml

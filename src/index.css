@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@theme {
+  --color-dent-bone: #F7F6F3;
+  --color-dent-navy: #0A1628;
+  --color-dent-primary: #023B8C;
+  --color-dent-cyan: #01B2DC;
+  --color-dent-navy-soft: #14243B;
+  --color-dent-card: #FFFFFF;
+  --color-dent-border: #E5E2DC;
+  --color-dent-muted: #5A6A85;
+
+  --font-serif: "Fraunces", Georgia, serif;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: #F7F6F3;
+    color: #0A1628;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #F7F6F3;
+    color: #0A1628;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-serif);
+  }
+}
+
+/* Continuous marquee for testimonials */
+@keyframes infinite-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-infinite-scroll {
+  display: flex;
+  width: max-content;
+  animation: infinite-scroll 40s linear infinite;
+}
+
+.animate-infinite-scroll:hover,
+.animate-infinite-scroll:focus-within {
+  animation-play-state: paused;
+}
+
+/* Glass & elevation utilities */
+.dent-card {
+  background-color: #FFFFFF;
+  border: 1px solid #E5E2DC;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px -2px rgba(10, 22, 40, 0.05);
+}
+
+.dent-card-interactive {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.dent-card-interactive:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px -4px rgba(2, 59, 140, 0.1);
+  border-color: rgba(1, 178, 220, 0.4);
+}

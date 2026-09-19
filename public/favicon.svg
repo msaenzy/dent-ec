@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="dentecGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#023B8C" />
+      <stop offset="100%" stop-color="#01B2DC" />
+    </linearGradient>
+    <linearGradient id="dentecWing" x1="10%" y1="10%" x2="90%" y2="90%">
+      <stop offset="0%" stop-color="#01B2DC" />
+      <stop offset="100%" stop-color="#023B8C" />
+    </linearGradient>
+  </defs>
+  <!-- Circular dark backdrop -->
+  <circle cx="32" cy="32" r="30" fill="#0A1628" />
+  <circle cx="32" cy="32" r="29" fill="none" stroke="#01B2DC" stroke-opacity="0.25" stroke-width="1.5" />
+  
+  <!-- Stylized faceted ribbon forming "D" / paper airplane dynamic vector -->
+  <g transform="translate(4, 2)">
+    <!-- Main stem / fold -->
+    <path d="M18 16 L27 12 L27 46 L18 42 Z" fill="url(#dentecGrad)" opacity="0.95" />
+    <!-- Outer curvature / wing folding forward into D loop -->
+    <path d="M27 12 C38 14 44 21 44 29 C44 37 38 44 27 46 L34 39 C40 35 40 25 32 20 Z" fill="url(#dentecWing)" />
+    <!-- Sharp dynamic center fold -->
+    <path d="M23 18 L38 29 L23 37 Z" fill="#01B2DC" opacity="0.85" />
+  </g>
+</svg>

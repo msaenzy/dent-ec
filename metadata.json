@@ -1,0 +1,6 @@
+{
+  "name": "dent.ec",
+  "description": "Odontología Integral en Samborondón, Ecuador. Planificación digital 3D, estética dental, implantes y rehabilitación oral.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
